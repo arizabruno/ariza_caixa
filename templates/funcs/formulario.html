@@ -1,0 +1,82 @@
+{% extends "funcs/func_layout.html" %}
+
+{% block body %}
+
+    </br>
+    <!--<h1>ENTRADA</h1>-->
+    </br>
+
+
+
+
+<form method="POST" action="/send" class="was-validated">
+    <div class="form-group">
+    <label for="exampleInputPassword1" class="mr-sm-2" for="inlineFormCustomSelect">Metodo</label>
+    <select name="metodo" class="custom-select" required>
+      <option value="">Selecionar</option>
+      <option value="cartao">Cartao</option>
+      <option value="dinheiro">Dinheiro</option>
+      <option value="cheque">Cheque</option>
+      <option value="crediario">Crediario</option>
+    </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1" class="mr-sm-2" for="inlineFormCustomSelect">Pagamento</label>
+        <select name="cond" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+            <option value="N">Nenhum</option>
+            <option value="AV">A vista</option>
+            <option value="PR">Predatado</option>
+        </select>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Petshop</label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" step="any" name="pet" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Clinica</label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" step="any" name="clinica" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Laboratorio</label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" step="any" name="laboratorio" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Transporte</label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" step="any" name="transporte" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Banho & Tosa</label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" step="any" name="banhoetosa" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">Cliente</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="example-number-input" step="any" name="cliente" placeholder="Nome do cliente">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Enviar</button>
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

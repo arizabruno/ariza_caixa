@@ -1,0 +1,53 @@
+{% extends "adm/layout.html" %}
+
+{% block body %}
+
+
+</br>
+</br>
+<h2>Funcionarios</h2>
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead> 
+        <tr>
+            <th class="col-md-6">NOME</th>
+            <th class="col-md-1">ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for funcionario in funcionarios %}
+        <tr>
+            <td>{{ funcionario["funcionario"] }}</td>
+            <td>{{ funcionario["id"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</br>
+</br>
+</br>
+
+<h2>Administradores</h2>
+<div class="table-responsive-sm">
+  <table class="table">
+    <thead> 
+        <tr>
+            <th class="col-md-6">NOME</th>
+            <th class="col-md-1">ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for administrador in administradores %}
+        <tr>
+            <td>{{ administrador["administrador"] }}</td>
+            <td>{{ administrador["id"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

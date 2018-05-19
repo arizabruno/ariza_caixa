@@ -1,0 +1,44 @@
+{% extends "adm/layout.html" %}
+
+{% block body %}
+
+    </br>
+    </br>
+    <h1>Adicionar</h1>
+    </br>
+    </br>
+    
+    <form method="POST" action="/adicionar_usuarios">
+      <fieldset>
+        <div class="form-group">
+          <select name="posicao_ad" class="form-control" required>
+            <option value="">Posicao</option>
+            <option value="administradores">Administrador</option>
+            <option value="funcionarios">Funcionario</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="disabledTextInput">Nome</label>
+          <input type="text" class="form-control" name="nome_ad">
+        </div>
+        <div class="form-group">
+          <label for="disabledTextInput">Senha</label>
+          <input type="text" class="form-control" name="senha_ad">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Adcionar</button>
+      </fieldset>
+      </br>
+    {% if mensagem == "negado" %}
+        <div class="alert alert-danger" role="alert">
+            <strong>ERRO: </strong> invalido!
+        </div>
+    {% endif %}
+    {% if mensagem == "sucesso" %}
+        <div class="alert alert-success" role="alert">
+            ERRO: Usuario nao adicionado!
+        </div>
+    {% endif %}
+    </form>
+
+{% endblock %}

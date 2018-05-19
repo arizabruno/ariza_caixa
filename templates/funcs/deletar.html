@@ -1,0 +1,26 @@
+{% extends "funcs/func_layout.html" %}
+
+{% block body %}
+    </br>
+    </br>
+    <form method="POST" action="/del">
+    <div class="form-group row">
+      <label for="example-number-input" class="col-2 col-form-label">ID </label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="example-number-input" name="id" placeholder="ID">
+      </div>
+    </div>
+    </br>
+    {% if mensagem == "negado" %}
+        <div class="alert alert-danger" role="alert">
+            <strong>ERRO: </strong> ID invalido!
+        </div>
+    {% endif %}
+    {% if mensagem == "sucesso" %}
+        <div class="alert alert-success" role="alert">
+            ID deletado com sucesso!
+        </div>
+    {% endif %}
+    <button type="submit" class="btn btn-outline-danger my-2 my-sm-0">Deletar</button>
+    </form>
+{% endblock %}

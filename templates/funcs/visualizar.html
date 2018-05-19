@@ -1,0 +1,47 @@
+{% extends "funcs/func_layout.html" %}
+
+{% block body %}
+
+    </br>
+    </br>
+    <h2>{{ data }}</h2>
+    </br>
+    </br>
+
+    <table class="table table-striped table-responsive">
+          <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">METODO</th>
+                <th scope="col">VALOR</th>
+                <th scope="col">PET</th>
+                <th scope="col">CLINICA</th>
+                <th scope="col">LABORATORIO</th>
+                <th scope="col">TRANSPORTE</th>
+                <th scope="col">BANHO/TOSA</th>
+                <th scope="col">COND</th>
+                <th scope="col">CLIENTE</th>
+                <!--<th scope="col">FUNCIONARIO</th>-->
+
+            </tr>
+          </thead>
+          <tbody>
+            {% for entrada in entradas %}
+            <tr>
+                <td>{{ entrada["id"] }}</td>
+                <td>{{ entrada["metodo"] }}</td>
+                <td>R$ {{ entrada["valor"] }}</td>
+                <td>R$ {{ entrada["pet"] }}</td>
+                <td>R$ {{ entrada["clinica"] }}</td>
+                <td>R$ {{ entrada["laboratorio"] }}</td>
+                <td>R$ {{ entrada["transporte"] }}</td>
+                <td>R$ {{ entrada["banhoetosa"] }}</td>
+                <td>{{ entrada["cond"] }}</td>
+                <td>{{ entrada["cliente"] }}</td>
+                <!--<td>{{ funcionario }}</td>-->
+            </tr>
+            {% endfor %}
+          </tbody>
+    </table>
+
+{% endblock %}

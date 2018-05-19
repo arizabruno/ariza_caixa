@@ -1,0 +1,34 @@
+{% extends "funcs/func_layout.html" %}
+
+{% block body %}
+
+<h1 class="display-1">{{ nome_func }}</h1>
+<h3>{{ data }}</h3>
+</br>
+</br>
+</br>
+
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Total Pet
+    <span class="badge badge-primary badge-pill">R${{ pet_total }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Total Clinica
+    <span class="badge badge-primary badge-pill">R${{ clinica_total }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Total Banho & Tosa
+    <span class="badge badge-primary badge-pill">R${{ banhoetosa_total }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Total Transporte
+    <span class="badge badge-primary badge-pill">R${{ transporte_total }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Total
+    <span class="badge badge-primary badge-pill">R${{ valor_total }}</span>
+  </li>
+</ul>
+
+{% endblock %}

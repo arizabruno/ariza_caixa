@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <!--<link href="/static/styles.css" rel="stylesheet"/>-->
+
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+
+        <title>Ariza</title>
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--           <img src="/img/ariza_logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+ -->          
+          <a class="navbar-brand">ARIZA CAIXA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+        </nav>
+
+        <!--<nav class="navbar navbar-dark bg-dark">-->
+        <!--    <a class="navbar-brand" href="/">Ariza Centro Veterinario</a>-->
+        <!--</nav>-->
+
+        <div class="{{ dc }}">
+
+                {% block body %}{% endblock %}
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
