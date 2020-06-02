@@ -213,9 +213,9 @@ def adm_vis_sql(id_input, metodo, cond, valor, funcionario, data, cliente):
         and_func_script = ""
         and_data_script = ""
 	
-	if data == "":
-		data_script = ""
-		and_data_script = ""
+    if data == "":
+        data_script = ""
+        and_data_script = ""
         and_cliente_script = ""
 
     if cliente == "":
